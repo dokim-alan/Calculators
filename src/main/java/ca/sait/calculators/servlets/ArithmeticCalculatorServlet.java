@@ -59,7 +59,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
                 } else { // operator.equals("%")
                     ageCalc = ageFirst % ageSecond;
                 }
-                    
+                 
                 String message = String.format("Result: %f", ageCalc);
                 request.setAttribute("message", message);
             } catch (Exception ex) {
@@ -74,7 +74,6 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
             // message +=  String.format("Age input is missing.");
             request.setAttribute("message", message);
         }
-        
         getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
     }
 }
