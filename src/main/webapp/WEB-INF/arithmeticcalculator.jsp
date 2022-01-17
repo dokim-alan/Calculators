@@ -24,7 +24,7 @@
         <button type="submit" name="operator" value="+">+</button>
         <button type="submit" name="operator" value="-">-</button>
         <button type="submit" name="operator" value="*">*</button>
-        <button type="submit" name="operator" value="%">%</button>
+        <button type="submit" name="operator" value="/">%</button>
             
         <!-- <button type="submit">Submit</button> -->
         </form>

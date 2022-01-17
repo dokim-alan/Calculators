@@ -48,7 +48,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
                 int ageSecond = Integer.parseInt(ageSecondInput);
                 
                 String operator = request.getParameter("operator");
-                double ageCalc;
+                double ageCalc = 0;
                 
                 if(operator.equals("+")){
                     ageCalc = ageFirst + ageSecond;
@@ -56,8 +56,8 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
                     ageCalc = ageFirst - ageSecond;
                 } else if (operator.equals("*")) {
                     ageCalc = ageFirst * ageSecond;
-                } else { // operator.equals("%")
-                    ageCalc = ageFirst % ageSecond;
+                } else { // operator.equals("/")
+                        ageCalc = ageFirst / ageSecond;
                 }
                  
                 String message = String.format("Result: %f", ageCalc);
@@ -74,6 +74,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
             // message +=  String.format("Age input is missing.");
             request.setAttribute("message", message);
         }
+        
         getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
     }
 }
